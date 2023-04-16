@@ -70,7 +70,6 @@ export default defineComponent({
   async mounted() {
     const vm : any = this;
     const { data } = await Api.getFeaturedProducts();
-    console.log(data)
     vm.featuredProducts = data.product;
     vm.$nextTick(() => {
       if ($(".featured__filter").length > 0) {
